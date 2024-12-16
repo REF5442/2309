@@ -1,0 +1,336 @@
+/* Reset default margins and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    background-image: url('background2.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    color: black;
+}
+
+/* Header Styles */
+header {
+    background-color: #2c2a2a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Logo Image Styling */
+.logo img {
+    max-width: 1000px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Navigation Bar Styling */
+.navigation {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style-type: none;
+    padding: 0;
+}
+
+.navigation a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.navigation a:hover {
+    background-color: #8b4513;
+    border-radius: 5px;
+}
+
+/* Section Styling */
+section {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #ffffff;
+    margin: 0;
+}
+
+/* About Section */
+#about {
+    
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: flex-start;
+    margin-top: 0;
+    padding-top: 20px;
+    background-color:white;
+}
+
+#about h2 {
+    margin-bottom: 20px; /* Adds space below the header */
+    text-align: left;    /* Keeps the header aligned to the left */
+}
+
+#about p {
+    font-size: 1em;
+    text-align: left;    /* Keeps the paragraph text aligned to the left */
+    line-height: 1.8;    /* Optional: improves readability */
+    margin-bottom: 20px;
+}
+#about figure {
+    display: grid;
+    grid-template-columns: auto 1fr; /* Image takes auto width, caption takes remaining space */
+    align-items: center;             /* Vertically aligns the caption with the image */
+    gap: 10px;
+}
+
+#about figure img {
+    width: 400px;                    /* Set a fixed width for the image */
+    height: auto;
+}
+
+#about figure figcaption {
+    text-align: left;
+    font-size: 1.2em;
+    color: #555;
+}
+/* Contact Section */
+#contact {
+    margin-top: 0;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .navigation {
+        justify-content: flex-start;
+    }
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Table Styling */
+/* Center the entire menu section */
+#menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Center both the table and image grid */
+.menu-container {
+    display: flex;
+    align-items: flex-start; /* Aligns items to the top of the container */
+    justify-content: center; /* Centers the entire container horizontally */
+    gap: 20px;               /* Space between the table and the image grid */
+    max-width: 800px;        /* Optional: Sets a maximum width */
+}
+
+/* Table and Image Grid Styles */
+.menu-container table,
+.menu-container .image-grid {
+    width: 100%;             /* Makes elements responsive */
+    max-width: 350px;        /* Ensures they don’t stretch too wide */
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Creates 2 columns for the images */
+    gap: 10px;
+}
+#menu table {
+    width: 80%;                       /* Sets table width */
+    margin: 20px auto;                /* Centers table on the page */
+    border-collapse: collapse;        /* Ensures borders are shared between cells */
+}
+
+#menu th, #menu td {
+    border: 1px solid #333;           /* Adds a solid border to cells */
+    padding: 12px;                    /* Adds padding inside cells */
+    text-align: left;                 /* Aligns text to the left */
+    font-size: 1em;
+}
+
+#menu th {
+    background-color: #b22222;        /* Sets background color for header row */
+    color: white;                     /* Text color for header row */
+}
+
+#menu tr:nth-child(even) {
+    background-color: #f2f2f2;        /* Alternates row color for readability */
+}
+
+/* Side-by-Side Layout for Menu and Image Grid */
+.menu-container {
+    display: flex;                  /* Enables flex layout */
+    align-items: flex-start;        /* Aligns items to the top */
+    gap: 20px;                      /* Adds space between the table and the image grid */
+    padding: 20px;
+}
+
+.menu-container table {
+    width: 60%;                     /* Adjusts width of the table */
+    border-collapse: collapse;
+}
+
+.menu-container th, .menu-container td {
+    border: 1px solid #333;
+    padding: 12px;
+    text-align: left;
+}
+
+.menu-container th {
+    background-color: #b22222;
+    color: white;
+}
+
+.image-grid {
+    
+    display: grid;
+    grid-template-columns: repeat(2, 1.3fr); /* 2 columns in the grid */
+    gap: 10px;                             /* Space between images */
+    width: 80%;                            /* Adjusts width of the image grid */
+    margin: 0 auto;
+    position: relative;
+    top: 40px;
+}
+
+.image-grid img {
+    margin-top: 1px;
+    width: 100%;                           /* Makes images responsive */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    
+}
+/* Full-page container */
+.full-page-bg {
+    display: flex;            /* Use Flexbox for alignment */
+    justify-content: center;  /* Center the image horizontally */
+    align-items: center;      /* Center the image vertically */
+    height: 100vh;            /* Full viewport height */
+    margin: 0;                /* Remove default margin */
+    background-color: #f4f4f4; /* Optional: Add a background color */
+}
+
+/* Image styling */
+.full-page-image {
+    max-width: 100%;          /* Make the image responsive */
+    height: auto;             /* Maintain aspect ratio */
+    display: block;           /* Ensures proper block-level styling */
+}
+
+/* Membership Form Section */
+.membership-form-section {
+    max-width: 400px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.membership-form-section h1 {
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    color: #333;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column; /* Stacks items vertically */
+    gap: 15px; /* Adds space between form elements */
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="tel"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    width: 100%;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+/* Slideshow container */
+.slideshow-container {
+    position: center;
+    max-width: 600px;
+    text-align: center;
+}
+
+#slideshow-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Navigation buttons */
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#prev {
+    left: 10px;
+}
+
+#next {
+    right: 10px;
+}
+
+.nav-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
